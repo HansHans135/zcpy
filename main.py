@@ -90,7 +90,7 @@ for fo in range(len(code)):
     
     elif i.startswith("輸入"):
         c=i.replace("輸入","")
-        var[c]=input()
+        var[c]=input("輸入: ")
 
     elif i.startswith("退出"):
         exit()
