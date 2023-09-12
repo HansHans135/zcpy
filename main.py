@@ -1,3 +1,5 @@
+import time
+
 var={}
 
 f=open("test.zc","r",encoding="utf-8")
@@ -92,5 +94,16 @@ for fo in range(len(code)):
         c=i.replace("輸入","")
         var[c]=input("輸入: ")
 
+    elif i.startswith("計算"):
+        c=i.replace("計算","").replace(".","").replace(",","")
+        print(eval(var[c]))
+
+    elif i.startswith("等待"):
+        c=i.replace("等待","").replace(".","").replace(",","")
+        time.sleep(int(c))
+
+    elif i.startswith("換行"):
+        print("\n")
+        
     elif i.startswith("退出"):
         exit()
